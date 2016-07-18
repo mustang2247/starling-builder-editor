@@ -13,7 +13,8 @@
                     "supportedClasses":["null", "flash.geom.Rectangle"]},
                 {"name":"tileGrid", "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.ImageGridPopup",
             "supportedClasses":["null", "flash.geom.Rectangle"]},
-                {"name":"texture", "read_only":true, "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.TextureConstructorPopup"}
+                {"name":"texture", "read_only":true, "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.TextureConstructorPopup"},
+                {"name":"style", "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.DefaultEditPropertyPopup", "supportedClasses":[null, "starling.extensions.lighting.LightStyle"]}
             ],
             "constructorParams":
             [
@@ -512,8 +513,35 @@
                 {"name":"height", "default_value":0}
             ],
             "tag":"ignore_default"
-        }
+        },
 
+        {
+            "cls":"starling.extensions.lighting.LightSource",
+            "params":[
+                {"name":"type", "component":"pickerList", "options":["point", "ambient", "directional"], "default_value":"point"},
+                {"name":"isActive", "component":"check", "default_value":true},
+                {"name":"color", "component":"colorPicker", "default_value":true},
+                {"name":"brightness", "component":"slider", "min":0, "max":1, "default_value":1},
+                {"name":"showLightBulb", "component":"check", "default_value":false},
+                {"name":"z", "default_value":0}
+            ],
+            "tag":"container"
+        },
+
+        {
+            "cls":"starling.extensions.lighting.LightStyle",
+            "params":[
+                {"name":"normalTexture", "read_only":true, "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.TextureConstructorPopup"},
+                {"name":"ambientRatio", "component":"slider", "min":0, "max":1, "step":0.01, "default_value":0.5},
+                {"name":"diffuseRatio", "component":"slider", "min":0, "max":1, "step":0.01, "default_value":0.5},
+                {"name":"specularRatio", "component":"slider", "min":0, "max":1, "step":0.01, "default_value":0.1},
+                {"name":"shininess", "component":"slider", "min":0, "max":32, "step":1, "default_value":1}
+            ],
+            "constructorParams":
+            [
+                {"cls":"starling.textures.Texture"}
+            ]
+        }
     ],
 
 

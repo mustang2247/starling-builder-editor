@@ -23,6 +23,8 @@ package starlingbuilder.editor
     import starling.display.Quad;
     import starling.display.Sprite;
     import starling.display.Sprite3D;
+    import starling.extensions.lighting.LightSource;
+    import starling.extensions.lighting.LightStyle;
     import starling.filters.BlurFilter;
     import starling.filters.DropShadowFilter;
     import starling.filters.GlowFilter;
@@ -103,7 +105,10 @@ package starlingbuilder.editor
             BlurFilter,
             GlowFilter,
             DropShadowFilter,
-            ColorFilter
+            ColorFilter,
+
+            LightSource,
+            LightStyle
         ]
 
         public static const DEFAULT_SCALE3_RATIO:Array = [0.49, 0.02, "horizontal"];
