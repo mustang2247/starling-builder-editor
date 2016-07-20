@@ -14,7 +14,7 @@
                 {"name":"tileGrid", "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.ImageGridPopup",
             "supportedClasses":["null", "flash.geom.Rectangle"]},
                 {"name":"texture", "read_only":true, "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.TextureConstructorPopup"},
-                {"name":"style", "component":"popup", "cls":true, "disable":true, "default_value":null, "editPropertyClass":"starlingbuilder.editor.ui.DefaultEditPropertyPopup", "supportedClasses":[null, "starling.extensions.lighting.LightStyle"]}
+                {"name":"style", "component":"popup", "cls":true, "disable":true, "default_value":{"cls":"starling.styles.MeshStyle"}, "editPropertyClass":"starlingbuilder.editor.ui.DefaultEditPropertyPopup", "supportedClasses":[null, "starling.extensions.lighting.LightStyle"]}
             ],
             "constructorParams":
             [
